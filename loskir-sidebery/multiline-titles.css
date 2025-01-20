@@ -1,0 +1,16 @@
+#root {
+  --tabs-font: 0.8rem system-ui !important;
+
+  --tabs-title-padding: 6px;
+  --tabs-title-lines: 2;
+}
+
+.Tab .t-box {
+  max-height: calc(var(--tabs-height) - var(--tabs-title-padding));
+}
+
+/* TODO: fix clamping */
+.Tab .title {
+  white-space: pre-wrap !important;
+  line-height: calc((var(--tabs-height) - var(--tabs-title-padding)) / var(--tabs-title-lines)) !important;
+}

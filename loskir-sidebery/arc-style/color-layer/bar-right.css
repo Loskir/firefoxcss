@@ -1,0 +1,8 @@
+/* Color layer as a bar on the right */
+.color-layer {
+  width: 4px !important;
+  opacity: 1 !important;
+  box-shadow: none !important;
+  right: 0;
+  left: auto !important;
+}

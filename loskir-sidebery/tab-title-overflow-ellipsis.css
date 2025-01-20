@@ -1,0 +1,10 @@
+.Tab .title {
+  text-overflow: ellipsis;
+}
+.t-box {
+  mask: none !important;
+}
+#root[data-tabs-close-btn="always"] .Tab .t-box,
+#root[data-tabs-close-btn="hover"] .Tab:hover .t-box {
+  margin-right: calc(var(--tabs-height) - var(--tabs-close-btn-margin)) !important;
+}

@@ -1,0 +1,20 @@
+#root {
+  --tabs-pinned-width: 42px !important;
+  --tabs-pinned-height: 42px !important;
+}
+
+.PinnedTabsBar .tab-wrapper {
+  flex-grow: 1;
+}
+
+.Tab[data-pin="true"] {
+  width: 100% !important;
+  min-width: var(--tabs-pinned-width);
+
+  & .body {
+    background-color: light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1)) !important;
+  }
+  &[data-active="true"] .body {
+    background-color: light-dark(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.4)) !important;
+  }
+}

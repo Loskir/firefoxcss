@@ -1,0 +1,12 @@
+#root {
+  --side-margin: 4px;
+}
+
+.AnimatedTabList,
+.top-horizontal-box,
+.PinnedTabsBar {
+  margin: 0 calc(var(--side-margin) - var(--tabs-margin));
+}
+.TabsPanel .new-tab-btns[data-new-tab-bar-position="bottom"] {
+  padding: 0 var(--side-margin) !important;
+}

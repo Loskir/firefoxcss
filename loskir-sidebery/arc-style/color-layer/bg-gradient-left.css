@@ -1,0 +1,12 @@
+/* Color layer as a bar on the right */
+.color-layer {
+  opacity: 0.5 !important;
+  box-shadow: none !important;
+  left: 0 !important;
+  width: 32px !important;
+  background: linear-gradient(to right, var(--tab-color), transparent) !important;
+  border-radius: var(--tabs-border-radius) 0 0 var(--tabs-border-radius) !important;
+}
+.Tab[data-colorized="true"] {
+  --tabs-activated-shadow: inherit !important;
+}

@@ -1,0 +1,9 @@
+@import url("pinned-tabs.css");
+@import url("rest.css");
+
+/* Color layer customization. Choose one */
+/* @import url("color-layer/around-favicon.css"); */
+/* @import url("color-layer/bar-right.css"); */
+/* @import url("color-layer/behind-favicon.css"); */
+@import url("color-layer/bg-gradient-left.css");
+/* @import url("color-layer/favicon-dot.css"); */

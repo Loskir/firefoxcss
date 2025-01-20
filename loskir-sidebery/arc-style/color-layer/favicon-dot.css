@@ -1,0 +1,30 @@
+/* Color layer as a dot over the favicon */
+#root.root {
+  --favicon-mask-border-width: 2px;
+  --color-circle-size: 10px;
+  --color-circle-center-x: 14px;
+  --color-circle-center-y: 2px;
+}
+.color-layer {
+  opacity: 1 !important;
+  box-shadow: none !important;
+  height: var(--color-circle-size) !important;
+  width: var(--color-circle-size) !important;
+  margin: calc(var(--tabs-height) / 2 - 8px - var(--color-circle-size) / 2 + var(--color-circle-center-y)) 0 0
+    calc(var(--tabs-inner-gap) + 2px - var(--color-circle-size) / 2 + var(--color-circle-center-x));
+  z-index: 21 !important;
+  border-radius: 50% !important;
+  pointer-events: none;
+}
+.Tab[data-colorized="true"] {
+  --tabs-activated-shadow: inherit !important;
+}
+.Tab[data-colorized="true"] .fav {
+  mask: radial-gradient(
+    circle at var(--color-circle-center-x) var(--color-circle-center-y),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0) calc(var(--color-circle-size) / 2 + var(--favicon-mask-border-width)),
+    #000 calc(var(--color-circle-size) / 2 + var(--favicon-mask-border-width) + 0.1px),
+    #000
+  );
+}

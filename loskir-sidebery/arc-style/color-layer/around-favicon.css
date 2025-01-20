@@ -1,0 +1,14 @@
+/* Color layer around the favicon */
+.color-layer {
+  --margin: 4px;
+  box-shadow: none !important;
+  width: calc(var(--tabs-height) - 2 * var(--margin)) !important;
+  height: calc(var(--tabs-height) - 2 * var(--margin)) !important;
+  margin: var(--margin);
+  border-radius: calc(var(--tabs-border-radius) - var(--margin)) !important;
+  border: 2px solid var(--tab-color);
+  background: none !important;
+}
+.Tab[data-colorized="true"] {
+  --tabs-activated-shadow: inherit !important;
+}

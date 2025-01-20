@@ -1,0 +1,5 @@
+/* Discarded tabs styling. Do not style tab title */
+.Tab[data-discarded="true"] > .body > .t-box,
+.Tab[data-discarded="true"] > .body > .ctx {
+  opacity: 1 !important;
+}

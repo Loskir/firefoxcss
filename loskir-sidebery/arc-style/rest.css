@@ -1,0 +1,71 @@
+#root.root {
+  --tabs-activated-shadow: 0 1px 4px -2px rgba(0, 0, 0, 0.5) !important;
+  --tabs-margin: 4px !important;
+  --tabs-close-btn-margin: 6px !important;
+  --ntb-padding: 8px !important;
+  --general-border-radius: 12px !important;
+  --tabs-font: normal 450 0.75rem system-ui !important;
+  --tabs-height: 32px !important;
+  --tabs-indent: 16px !important;
+  --tabs-activated-bg: white !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  #root.root {
+    --tabs-activated-bg: rgba(255, 255, 255, 0.2) !important;
+    --tabs-activated-shadow: none !important;
+  }
+}
+
+.new-tab-btns {
+  padding-top: var(--ntb-padding) !important;
+}
+
+/* Make close button radius consistent, animate hover */
+.Tab .close {
+  border-radius: calc(var(--tabs-border-radius) - var(--tabs-close-btn-margin)) !important;
+  transition: background-color var(--d-fast);
+}
+
+/* Arc-like effect when clicking on a tab */
+/* It breaks indent guides, use at your own risk */
+.Tab:active {
+  transform: scale(0.99);
+}
+
+/* Fix vertical align for tab title. Depends on the font, tweak for your liking */
+/*.Tab .t-box {
+      margin-bottom: -2px;
+  }*/
+
+/* Tab favicon spacing */
+#root.root {
+  --tabs-inner-gap: calc((var(--tabs-height) - 16px) / 2 - 2px);
+}
+
+.Tab .t-box {
+  margin-right: var(--tabs-inner-gap);
+}
+.Tab .title {
+  letter-spacing: -0.3px;
+  font-weight: 420;
+}
+
+/* New tab page icon. */
+#icon_ff path {
+  d: path(
+    "M3 1h10a2 2 0 01 2 2v10a2 2 0 01-2 2H3a2 2 0 01-2-2V3a2 2 0 01 2-2zm3 1H3a1 1 0 00-1 1v10a1 1 0 00 1 1h10a1 1 0 00 1-1V5H7.5A1.5 1.5 0 01 6 3.5zm1 0v1.5a.5.5 0 00 .5.5H14V3a1 1 0 00-1-1zM5 8a1 1 0 01 0 2 1 1 0 01 0-2zm3 0a1 1 0 01 0 2 1 1 0 01 0-2zm3 0a1 1 0 01 0 2 1 1 0 01 0-2z"
+  ) !important;
+}
+
+/* Plus icon. */
+#icon_plus path {
+  d: path("M7 1a.5.5 0 01 1 0v6h6a.5.5 0 01 0 1H8v6a.5.5 0 01-1 0V8H1a.5.5 0 01 0-1h6z") !important;
+}
+
+.Tab[data-selected="true"] .body::before {
+  box-shadow: none !important;
+}
+.Tab[data-active="true"] .body::before {
+  background-color: transparent !important;
+}

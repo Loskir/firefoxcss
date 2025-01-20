@@ -1,0 +1,7 @@
+/* Replace scroll shadows with borders */
+.ScrollBox > .top-shadow,
+.ScrollBox > .bottom-shadow {
+  border: 1px solid light-dark(rgba(0, 0, 0, 0.1), rgba(220, 220, 220, 0.2));
+  box-shadow: none !important;
+  height: 13px !important;
+}
